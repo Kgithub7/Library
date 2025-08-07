@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router";
+import { books } from "./data.js";
 import Nav from "./components/Nav.jsx";
 import Home from "./pages/Home.jsx";
 import Footer from "./components/Footer.jsx";
@@ -11,7 +12,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/books" element={<Books />} />
+          <Route path="/books" element={<Books books={books} />} />
         </Routes>
         <Footer />
       </div>
