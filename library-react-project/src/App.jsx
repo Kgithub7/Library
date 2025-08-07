@@ -1,21 +1,21 @@
-import { useState } from "react";
-import Nav from "./components/Nav.jsx"
-import Landing from "./components/Landing.jsx";
-import Highlights from "./components/Highlights.jsx";
-import Featured from "./components/Featured.jsx";
-import Discounted from "./components/Discounted.jsx";
+import { BrowserRouter as Router, Routes, Route } from "react-router";
+import Nav from "./components/Nav.jsx";
+import Home from "./pages/Home.jsx";
+import Footer from "./components/Footer.jsx";
+import Books from "./pages/Books.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <Nav />
-      <Landing />
-      <Highlights />
-      <Featured />
-      <Discounted />
-    </div>
-      
-   
+    <Router>
+      <div className="App">
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/books" element={<Books />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
