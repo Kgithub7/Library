@@ -351,6 +351,7 @@ FEATURED
   display: flex;
   flex-wrap: wrap;
   margin: 0 -24px;
+  gap: 20px 0;
 }
 
 .book {
@@ -365,7 +366,7 @@ FEATURED
 
 .book__img {
   max-height: 320px;
-  max-width: 250px;
+  max-width: 240px;
   transition: all 300ms ease;
 }
 
