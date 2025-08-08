@@ -9,10 +9,6 @@ function BoookInfo({ books, cart, addToCart }) {
   const { id } = useParams();
   const book = books.find((book) => +book.id === +id);
 
-  function addBookToCart(book) {
-    addToCart(book);
-  }
-
   function bookInCart() {
     return cart.find((book) => +book.id === +id);
   }
@@ -63,7 +59,7 @@ function BoookInfo({ books, cart, addToCart }) {
                     Checkout
                   </Link>
                 ) : (
-                  <button className="btn" onClick={() => addBookToCart(book)}>
+                  <button className="btn" onClick={() => addToCart(book)}>
                     Add to Cart
                   </button>
                 )}
