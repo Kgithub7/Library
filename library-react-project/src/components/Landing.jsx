@@ -1,4 +1,3 @@
-import React from "react";
 import HeaderImage from "../assets/Undraw_Books.svg"
 
 function Landing() {
@@ -12,7 +11,7 @@ function Landing() {
               Find your dream book with{" "}
               <span className="purple">Library</span>
             </h2>
-            <a href="#features">
+            <a href="#featured">
               <button className="btn">Browse Books</button>
             </a>
                   </div>
