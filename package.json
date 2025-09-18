@@ -1,8 +1,9 @@
 {
-  "name": "library-react-project",
+  "name": "e-library",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://Kgithub7.github.io/E-Library",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
