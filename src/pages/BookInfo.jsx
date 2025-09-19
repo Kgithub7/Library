@@ -1,14 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useParams } from "react-router";
+import { useEffect } from "react";
 import Rating from "../components/ui/Rating";
 import Price from "../components/ui/Price";
 import Book from "../components/ui/Book";
-import { useState } from "react";
 
 function BoookInfo({ books, cart, addToCart }) {
   const { id } = useParams();
   const book = books.find((book) => +book.id === +id);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   function bookInCart() {
     return cart.find((book) => +book.id === +id);
   }

@@ -1,8 +1,12 @@
 import { Link } from "react-router";
+import { useEffect } from "react";
 import CartItem from "../components/ui/CartItem";
 import EmptyCart from "../assets/empty_cart.svg";
 
 function Cart({ cart, changeQuantity, removeItem }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   let price = 0;
   cart.forEach((item) => {
     price += +(item.salePrice || item.originalPrice) * item.quantity;
@@ -32,13 +36,15 @@ function Cart({ cart, changeQuantity, removeItem }) {
                   />
                 ))}
               </div>
-            {cart.length===0&&<div className="cart__empty">
-                <img src={EmptyCart} alt="" className="cart__empty--img" />
-                <h2>You don't have any books in your cart.</h2>
-                <Link to="/books">
-                  <button className="btn">Browse Books</button>
-                </Link>
-              </div>}
+              {cart.length === 0 && (
+                <div className="cart__empty">
+                  <img src={EmptyCart} alt="" className="cart__empty--img" />
+                  <h2>You don't have any books in your cart.</h2>
+                  <Link to="/books">
+                    <button className="btn">Browse Books</button>
+                  </Link>
+                </div>
+              )}
             </div>
             {cart.length > 0 && (
               <div className="total">

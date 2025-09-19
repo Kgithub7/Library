@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import HeaderImage from "../assets/Undraw_Books.svg"
 
 function Landing() {
@@ -11,9 +12,9 @@ function Landing() {
               Find your dream book with{" "}
               <span className="purple">Library</span>
             </h2>
-            <a href="#featured">
+            <Link to="/books">
               <button className="btn">Browse Books</button>
-            </a>
+            </Link>
                   </div>
                   <figure className="header__img--wrapper">
                       <img src={HeaderImage} alt="" />

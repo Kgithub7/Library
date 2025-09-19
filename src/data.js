@@ -66,7 +66,7 @@ export const books = [
   },
   {
     id: 9,
-    title: "48 Laws of Power Summary",
+    title: "The 48 Laws of Power",
     url: "https://m.media-amazon.com/images/I/611X8GI7hpL._AC_UF1000,1000_QL80_.jpg",
     originalPrice: 35,
     salePrice: 19.95,
