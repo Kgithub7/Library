@@ -2,9 +2,6 @@
 
 Library is a Single-Page Application built with React and Vite that functions as a feature-rich online bookstore. It enables users to browse a curated collection of books, view detailed information, and manage a shopping cart. The project is structured with a clear separation of components and pages, featuring reusable UI elements for a consistent user experience, and it is styled for a fully responsive layout.
 
-**Live demo:** [Library](https://kgithub7.github.io/Library/#/)
-
-
 ## Features
 
 * **Fully Responsive Layout:** The application is styled to ensure a seamless and consistent user experience across all devices.
