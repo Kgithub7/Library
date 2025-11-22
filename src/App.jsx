@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import { useEffect, useState } from "react";
 import { books } from "./data.js";
 import Nav from "./components/Nav.jsx";
@@ -17,7 +18,7 @@ function App() {
 
   function changeQuantity(book, newQuantity) {
     setCart(
-      cart.map((item) =>
+      cart.map(item =>
         item.id === book.id ? { ...item, quantity: +newQuantity } : item
       )
     );
@@ -28,13 +29,12 @@ function App() {
   }
 
   function numberOfItems() {
-    let counter = 0
+    let counter = 0;
     cart.forEach(item => {
-      counter+=item.quantity
+      counter += item.quantity;
     });
-    return counter
-}
-
+    return counter;
+  }
 
   useEffect(() => {
     console.log(cart);
@@ -42,6 +42,7 @@ function App() {
 
   return (
     <Router>
+      <Analytics />
       <div className="App">
         <Nav numberOfItems={numberOfItems()} />
         <Routes>
